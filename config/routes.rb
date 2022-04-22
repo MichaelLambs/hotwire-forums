@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'main#index'
 
   resources :discussions, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
-    resources :posts, only: [:show, :create, :edit, :update], module: :discussions
+    resources :posts, only: [:show, :create, :edit, :update, :destroy], module: :discussions
   end
 end
